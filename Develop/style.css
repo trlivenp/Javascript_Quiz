@@ -1,0 +1,28 @@
+/* Custom CSS for answer options */
+.answer-option {
+    background-color: #ccc; /* Grey background color */
+    border: 1px solid #999; /* Border */
+    padding: 10px; /* Padding around options */
+    margin: 5px 0; /* Margin between options */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #333; /* Dark text color */
+}
+
+.answer-option:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    border-color: #007bff; /* Border color on hover */
+}
+
+.answer-option.correct {
+    background-color: #28a745; /* Background color for correct answer */
+    color: #fff; /* Text color for correct answer */
+    border-color: #28a745; /* Border color for correct answer */
+}
+
+.answer-option.incorrect {
+    background-color: #dc3545; /* Background color for incorrect answer */
+    color: #fff; /* Text color for incorrect answer */
+    border-color: #dc3545; /* Border color for incorrect answer */
+}

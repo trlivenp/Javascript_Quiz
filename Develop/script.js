@@ -83,10 +83,11 @@ function displayQuestion(index) {
     answerOptions.forEach((option) => {
         const optionButton = document.createElement("button");
         optionButton.textContent = option;
-        optionButton.classList.add("btn", "btn-secondary", "mr-2");
+        optionButton.classList.add("btn", "btn-secondary", "mr-2", "answer-option"); // Add the "answer-option" class
         optionButton.addEventListener("click", () => checkAnswer(option));
         optionsDiv.appendChild(optionButton);
     });
+
 }
 
 // Function to check the selected answer
@@ -140,16 +141,16 @@ function endQuiz() {
     clearInterval(timer);
     questionDiv.style.display = "none";
     optionsDiv.style.display = "none";
-    timerSpan.style.display = "none"; 
+    timerSpan.style.display = "none";
     scoreForm.style.display = "block";
     finalScoreSpan.textContent = score;
-    
+
     // Get initials from the input field
     const initials = initialsInput.value;
-    
+
     // Save high score and initials
     saveHighScore(initials, score);
-    
+
     // Display high scores
     displayHighScores();
 }
@@ -162,16 +163,16 @@ const initialsInput = document.getElementById("initials");
 
 scoreForm.addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the form from submitting and refreshing the page
-    
+
     // Get the initials from the input field
     const initials = initialsInput.value;
-    
+
     // Save high score and initials
     saveHighScore(initials, score);
-    
+
     // Display high scores
     displayHighScores();
-    
+
     // You can optionally clear the input field or reset the game here
     initialsInput.value = "";
 });

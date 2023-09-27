@@ -9,12 +9,23 @@ N/A
 
 ## Usage
 
+![Mock up for the JavaScript Quiz](./gif/JavaScriptQuiz.gif)
 
 ## Credits
 
+N/A
 
 ## License
 
+N/A
 
 ## Features
+Timer 
 
+Bootstrap
+
+Response checker for correct and incorrect answers
+
+Reactive css styling
+
+Scoreboard saved via LocalStorage

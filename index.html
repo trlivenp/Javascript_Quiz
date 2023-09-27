@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container mt-5">
-    <h1 class="text-center">JavaScript Quiz</h1>
-    <hr>
+    <div class="container mt-5">
+        <h1 class="text-center">JavaScript Quiz</h1>
+        <hr>
 
-    <!-- Quiz Content -->
-    <div id="quiz-container">
-        <!-- Start Button -->
-        <button class="btn btn-primary" id="start-button">Start Quiz</button>
+        <!-- Quiz Content -->
+        <div id="quiz-container">
+            <!-- Start Button -->
+            <button class="btn btn-primary" id="start-button">Start Quiz</button>
 
-        <!-- Question Display -->
-        <div id="question-div" class="mt-4">
-            <h3>Question 1:</h3>
-            <p>What is JavaScript?</p>
-        </div>
-
-        <!-- Answer Options -->
-        <div id="options-div" class="mt-4">
-            <button class="btn btn-secondary mr-2">Option 1</button>
-            <button class="btn btn-secondary mr-2">Option 2</button>
-            <button class="btn btn-secondary mr-2">Option 3</button>
-            <button class="btn btn-secondary">Option 4</button>
-        </div>
-
-        <!-- Timer -->
-        <div id="timer-div" class="mt-4">
-            <p>Time Left: <span id="timer">60</span> seconds</p>
-        </div>
-    </div>
-
-    <!-- Score and Initials Form (Hidden Initially) -->
-    <div id="score-form" class="mt-4 d-none">
-        <h3>Your Score: <span id="final-score">0</span></h3>
-        <form>
-            <div class="form-group">
-                <label for="initials">Enter Initials:</label>
-                <input type="text" class="form-control" id="initials" placeholder="Your initials" maxlength="3">
+            <!-- Question Display -->
+            <div id="question" class="mt-4">
+                <h3 id="question-title">Question 1:</h3>
+                <p id="question-text">What is JavaScript?</p>
             </div>
-            <button type="submit" class="btn btn-primary">Save Score</button>
-        </form>
-    </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="./Develop/script.js"></script>
+            <!-- Answer Options -->
+            <div id="options" class="mt-4"> </div>
+
+            <!-- Timer -->
+            <div id="timer" class="mt-4">
+                <p>Time Left: <span id="timer-left">60</span> seconds</p>
+            </div>
+        </div>
+
+        <!-- Score and Initials Form (Hidden Initially) -->
+        <div id="score-form" class="mt-4 d-none">
+            <h3>Your Score: <span id="final-score">0</span></h3>
+            <form>
+                <div class="form-group">
+                    <label for="initials">Enter Initials:</label>
+                    <input type="text" class="form-control" id="initials" placeholder="Your initials" maxlength="3">
+                </div>
+                <button type="submit" class="btn btn-primary">Save Score</button>
+            </form>
+        </div>
+        <!-- High Scores -->
+        <div id="high-scores" class="mt-4">
+            <h3>High Scores:</h3>
+            <ul id="high-scores-list"></ul>
+        </div>        
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./Develop/script.js"></script>
 </body>
+
 </html>
